@@ -1,1 +1,1 @@
-# Full Stack Next.JS!
+# Full Stack Next.JS App!
