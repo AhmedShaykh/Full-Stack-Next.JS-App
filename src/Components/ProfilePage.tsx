@@ -11,7 +11,7 @@ const ProfilePage = () => {
 
         try {
 
-            await fetch("http://localhost/api/logout");
+            await fetch("/api/logout");
 
             toast.success("User Log Out...");
 
