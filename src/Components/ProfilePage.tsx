@@ -1,12 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
-import Link from "next/link";
 
 const ProfilePage = () => {
-
-    const [data, setData] = useState("nothing");
 
     const router = useRouter();
 
@@ -14,7 +11,7 @@ const ProfilePage = () => {
 
         try {
 
-            await fetch("/api/users/logout");
+            await fetch("http://localhost/api/logout");
 
             toast.success("User Log Out...");
 
@@ -27,10 +24,7 @@ const ProfilePage = () => {
             toast.error(error.message);
 
         }
-
     };
-
-    const getUserDetails = async () => { };
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen py-2">
@@ -44,7 +38,7 @@ const ProfilePage = () => {
             >
                 Log Out
             </button>
-        </div>
+        </div >
     )
 };
 

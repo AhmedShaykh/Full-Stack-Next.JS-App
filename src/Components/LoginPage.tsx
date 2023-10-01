@@ -29,7 +29,7 @@ const LoginPage = () => {
 
             toast.success("User Login Success...");
 
-            router.push("/profile");
+            router.push("/");
 
         } catch (error: any) {
 
