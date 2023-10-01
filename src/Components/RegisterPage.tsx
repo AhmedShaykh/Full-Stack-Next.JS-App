@@ -18,7 +18,7 @@ const RegisterPage = () => {
 
         try {
 
-            const response = await fetch("/api/signup", {
+            await fetch("/api/signup", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -29,8 +29,6 @@ const RegisterPage = () => {
                     password
                 })
             });
-
-            console.log(response);
 
             toast.success("User Rigister Success...");
 
@@ -74,7 +72,7 @@ const RegisterPage = () => {
             <input
                 className="p-2 w-[40%] border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600 text-black"
                 id="email"
-                type="text"
+                type="email"
                 placeholder="email"
                 onChange={(e) => setEmail(e.target.value)}
             />
